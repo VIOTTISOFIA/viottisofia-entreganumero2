@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-// import axios from "axios";
+import axios from "axios";
 import "./ItemListContainer.css"
-import CardProduct from "../CardProduct/CardProduct";
+import CardProduct from "../../CardProduct/CardProduct";
 
 import { Link } from "react-router-dom";
 
-const ItemList = () => {
+const ItemListContainer = () => {
     const [char, setChars]= useState ([]);
     
     useEffect(() => {
@@ -37,4 +37,4 @@ return (
 )
 }
 
-export default ListProduct
+export default ItemListContainer
