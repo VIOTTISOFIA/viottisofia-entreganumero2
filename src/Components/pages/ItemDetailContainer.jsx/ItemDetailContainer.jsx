@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 // import axios from "axios";
 import { useParams } from "react-router-dom";
 
-import CardProduct from "../../CardProduct/CardProduct"
+// import CardProduct from "../../CardProduct/CardProduct"
 
 const ItemDetailContainer = () => {
   const [char, setChar] = useState({});
@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
 
-fetch("../../data.jsons")
+fetch("../../data.json")
 
 .then(res => res.json())
 

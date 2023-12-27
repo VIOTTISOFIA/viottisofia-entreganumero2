@@ -5,14 +5,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //COMPONENTES 
 import Header from "./Components/Header/Header";
 import NavBar from './Components/NavBar/NavBar';
-import ItemListContainer from "./Components/ItemListContainer/ItemListContairner"
+import ItemListContainer from "./Components/ItemListContainer/ItemListContairner";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 
 //PAGES 
 import HomePage from './Components/pages/HomePage/HomePage';
 import AboutPage from './Components/pages/AboutPage/AboutPage';
 import ContactPage from './Components/pages/ContactPage/ContactPage';
 import ErrorPage from './Components/pages/ErrorFile/ErrorPage';
-import ItemDetailContainer from './Components/pages/ItemDetailContainer.jsx/ItemDetailContainer';
 
 
 const App = () =>  {
