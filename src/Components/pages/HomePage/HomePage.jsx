@@ -1,16 +1,11 @@
-import ItemListContainer from "./Components/ItemListContainer/ItemListContainer"
+import ItemListContainer from "../../ItemListContainer/ItemListContainer";
 const HomePage = () => {
 return (
     <div>
         <h1>List Products</h1>
-        <ListProduct/>
+        <ItemListContainer/>
     </div>
 )
 }
 
-export default HomePage
-
-
-
-
-i
+export default HomePage;

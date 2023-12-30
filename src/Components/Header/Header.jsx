@@ -10,7 +10,6 @@ const Header = () => {
             <Link to="/">
             <img src={img} alt="joyas" width={500}/> 
             </Link>
-           
 
         </div>
     )

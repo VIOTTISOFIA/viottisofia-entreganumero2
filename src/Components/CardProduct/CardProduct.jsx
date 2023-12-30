@@ -8,8 +8,9 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 const CardProduct = ({char}) => {
-    const { id,img,title, category, Desc, quantity} = char;
+    const { img, title, category, Desc, quantity} = char;
   return (
+    <div>
     <Card sx={{ maxWidth: 345 }}>
         <CardActionArea> 
         
@@ -20,9 +21,13 @@ const CardProduct = ({char}) => {
           {title}
         </Typography>
   
-        {/* <Typography variant="body2" color="text.secondary">
+
+        <Typography variant="body2" color="text.secondary">
           {category}
-        </Typography> */}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {Desc}
+        </Typography>
       </CardContent>
       <CardActions>
         <Button  className="btn-carrito" size="small">Agregar al Carrito</Button>
@@ -31,6 +36,7 @@ const CardProduct = ({char}) => {
       </CardActionArea>
      
     </Card>
+    </div>
   );
 }
 
