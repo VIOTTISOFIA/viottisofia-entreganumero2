@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { pedirDatos } from "../helpers/pedirDatos";
 import "./ItemListContainer.css";
-import CardProduct from "../CardProduct/CardProduct";
-import data from "../data/data.json";
+import ItemList from "../ItemList/ItemList";
 
 
-// import { Link } from "react-router-dom";
 
 
 const ItemListContainer = () => {
     const [productos, setProductos] = useState ([]);
 
     useEffect (() => {
-        pedirProductos ()
+        pedirDatos ()
         .then((res) => {
             setProductos (res);
         })
@@ -19,8 +18,8 @@ const ItemListContainer = () => {
 
   return (
     <div>
-        <h1>Productos</h1>
-        {
+       <ItemList productos={productos}/>
+        {/* {
             productos.length > 0 &&
             productos.map((producto)=> {
                 return (
@@ -32,8 +31,8 @@ const ItemListContainer = () => {
                     </div>
                 )
             })
-        }
-      
+        } */}
+    
     </div>
   )
 }

@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //COMPONENTES 
 import Header from "./Components/Header/Header";
 import NavBar from './Components/NavBar/NavBar';
-import ItemListContainer from "./Components/ItemListContainer";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 
 
 //PAGES 
@@ -19,25 +19,14 @@ import ErrorPage from './Components/pages/ErrorFile/ErrorPage';
 const App = () =>  {
 
   return (
-  <Router>
+
       <div className='App'>
       <Header/>
       <NavBar/>
-      {/* <ItemListContainer/> */}
+      <ItemListContainer/> 
   
-    <Routes>
-      <Route path="/" element ={<HomePage/>}/>
-      <Route path="/about" element ={<AboutPage/>}/>
-      <Route path="/contact" element ={<ContactPage/>}/>
-      <Route path="/*" element ={<ErrorPage/>}/>
-      {/* <Route path="/detail/:id" element ={<ItemDetailContainer/>}/> */}
-      <Route path="/list" element ={<ItemListContainer/>}/>
-      {/* <Route path="/category/:categoryId" element ={<ItemListContainer/>}/> */}
 
-    </Routes>
     </div>
-  </Router>
-    
 
   )
 }
