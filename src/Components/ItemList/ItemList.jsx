@@ -6,7 +6,7 @@ return (
     <div className="container">
         <h2 class="main-title">Productos</h2>
     <div className='productos'>
-        { productos.map((prod) => <Item producto=(productos) key=(productos.id) />)} 
+        {/* { productos.map((prod) => <Item productos =(productos) key=(productos.id) />)}   */}
     </div>
     </div>
 )

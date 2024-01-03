@@ -1,4 +1,4 @@
-[
+export const productos = [
   {
     "id": 1,
     "category": "Aros",
@@ -41,4 +41,4 @@
     "img": "../../src/assets/anillo.jpg",
     "Desc": "Anillos Swarovski, plata 925."
   }
-]
+];

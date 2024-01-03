@@ -1,7 +1,7 @@
-import data from "../data/data.json";
+import {data} from "../data/data.js";
 
 const pedirDatos = () => {
-    return new promise ((resolve, reject) => {
+    return new Promise ((resolve) => {
         setTimeout ( () => {
             resolve(data); 
         }, 500)
