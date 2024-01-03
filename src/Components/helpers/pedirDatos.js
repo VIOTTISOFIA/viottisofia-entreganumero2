@@ -1,7 +1,7 @@
-import {data} from "../data/data.js";
+import {productos} from "../data/data.js";
 
 const pedirDatos = () => {
-    return new Promise ((resolve) => {
+    return new Promise ((resolve, reject) => {
         setTimeout ( () => {
             resolve(data); 
         }, 500)

@@ -1,15 +1,15 @@
 import React from 'react'
 
-const Item = ( {producto}) => {
+const Item = ( {productos}) => {
 return (
     <div className='producto'>
-        <img src={producto.img} />
+        <img src={productos.img} />
         <div>
-            <h4>{producto.title}</h4>
-            <p>Precio: ${producto.precio}</p>
-            <p>Categoría: {producto.category}</p>
-            <p>{producto.Desc}</p>
-            <a className='ver-más' href={`/item/${producto.id}`}>Ver más</a>
+            <h4>{productos.title}</h4>
+            <p>Precio: ${productos.precio}</p>
+            <p>Categoría: {productos.category}</p>
+            <p>{productos.Desc}</p>
+            <a className='ver-más' href={`/item/${productos.id}`}>Ver más</a>
         </div>
     </div>
 )
