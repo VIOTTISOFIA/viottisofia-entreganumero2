@@ -1,6 +1,6 @@
 import './App.css'
 //REACT-ROUTER-DOM 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 
 //COMPONENTES 
 import Header from "./Components/Header/Header";
@@ -17,15 +17,26 @@ import ItemDetailContainer from './Components/Header/ItemDetailContainer/ItemDet
 
 
 
-const App = () =>  {
+function App  ()  {
 
   return (
 
       <div className='App'>
+      <BrowserRouter>
       <Header/>
       <NavBar/>
-      <ItemListContainer/> 
-      <ItemDetailContainer ItemId={2}/>
+      <Routes>
+        <Route path='/' element= { <ItemListContainer/> } />
+        <Route path='/item' element= {<ItemDetailContainer ItemId={2}/>} />
+        <Route path='/aboutPage' element= {<AboutPage/>} />
+        <Route path='/contactPage' element= { <ContactPage/> } />
+        <Route path='/errorPage' element= { <ErrorPage/> } />
+        <Route path='/homePage' element= { <HomePage/> } />
+
+
+      </Routes>
+  
+      </BrowserRouter>
   
 
     </div>
