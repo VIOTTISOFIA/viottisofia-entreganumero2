@@ -13,6 +13,7 @@ import HomePage from './Components/pages/HomePage/HomePage';
 import AboutPage from './Components/pages/AboutPage/AboutPage';
 import ContactPage from './Components/pages/ContactPage/ContactPage';
 import ErrorPage from './Components/pages/ErrorFile/ErrorPage';
+import ItemDetailContainer from './Components/Header/ItemDetailContainer/ItemDetailContainer';
 
 
 
@@ -24,6 +25,7 @@ const App = () =>  {
       <Header/>
       <NavBar/>
       <ItemListContainer/> 
+      <ItemDetailContainer ItemId={2}/>
   
 
     </div>

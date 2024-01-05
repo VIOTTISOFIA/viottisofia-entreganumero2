@@ -7,4 +7,16 @@ const pedirDatos = () => {
         }, 500)
     })
 }
-export default pedirDatos
+
+export const pedirItemPorId = (id) => {
+    const item = productos.find((el) => el.id === id);
+
+    if (item) {
+        resolve (item)
+    } else {
+        reject ({
+            error: "No se encontro el producto "
+        })
+    }
+    }
+
