@@ -1,4 +1,4 @@
-import {productos} from "../data/data.js";
+import productos from "../../data/data";
 
 const pedirDatos = () => {
     return new Promise ((resolve, reject) => {
@@ -19,4 +19,5 @@ export const pedirItemPorId = (id) => {
         })
     }
     }
+    export default pedirDatos
 
