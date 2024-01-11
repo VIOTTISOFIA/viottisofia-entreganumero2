@@ -1,4 +1,4 @@
-const productos = [
+const products = [
   {
     "id": 1,
     "category": "Aros",
@@ -42,4 +42,4 @@ const productos = [
     "Desc": "Anillos Swarovski, plata 925."
   }
 ];
-export default productos 
+export default products 

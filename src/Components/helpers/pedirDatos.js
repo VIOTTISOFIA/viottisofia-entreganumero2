@@ -1,15 +1,15 @@
-import productos from "../../data/data";
+import products from "../../data/data";
 
 const pedirDatos = () => {
     return new Promise ((resolve, reject) => {
         setTimeout ( () => {
-            resolve(data); 
+            resolve(products); 
         }, 500)
     })
 }
 
 export const pedirItemPorId = (id) => {
-    const item = productos.find((el) => el.id === id);
+    const item = products.find((el) => el.id === id);
 
     if (item) {
         resolve (item)
