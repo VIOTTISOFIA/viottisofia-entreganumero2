@@ -1,19 +1,52 @@
+import { useContext, useState } from "react";
+import itemCounter from "../itemCounter/itemCounter";
+import { CartContext } from "../../context/CartContext";
+import products from "../../data/data";
 
 
-const ItemDetail = ({item}) => {
-return (
+const ItemDetail = ({ item }) => {
+const {carrito, setCarrito} = useContext(CartContext);
+console.log(carrito)
 
-    <div className="container">
-        <div className="producto-detalle">
-            <img src={item.img} alt= {item.title} />
+    const [quantity, setQuantity] = useState(1);
+
+    const handleRestar = () => {
+        quantity > 1 && setQuantity(quantity - 1)
+    }
+
+    const handleSumar = () => {
+        quantity < item.stock && setQuantity(quantity + 1)
+    }
+
+    const handleAgregar = () => {
+        const itemAgregado = { ...item, quantity };
+        const estaEnElCarrito = carrito.find((product) => product.id === itemAgregado.id);
+        if (estaEnElCarrito) {
+            console.log("Esta en el carrito")
+        } else {
+            console.log ("No esta")
+        }
+
+        setCarrito ( [...carrito, itemAgregado]);
+
+    }
+    return (
+        <div className="container">
+            <div className="producto-detalle">
+                <img src={item.img} alt={item.title} />
+                <div>
+                    <h3 className="title">{item.title}</h3>
+                    <p className="description">{item.Desc}</p>
+                    <p className="category">Categoría: {item.category}</p>
+                    <p className="precio"> $ {item.precio}</p>
+                    <itemCounter quantity={quantity}
+                    handleSumar={handleSumar}
+                    handleRestar={handleRestar} 
+                    handleAgregar={handleAgregar} />
+                </div>
+            </div>
         </div>
-        <h3 className="title">{item.title}</h3>
-        <p className="description">{item.Desc}</p>
-        <p className="category">Categoría: {item.category}</p>
-        <p className="precio"> $ {item.precio}</p>
-    
-    </div>
-)
+    )
 }
 
 export default ItemDetail

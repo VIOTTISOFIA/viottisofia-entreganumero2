@@ -2,13 +2,12 @@ import React, { useEffect } from 'react'
 
 const AboutPage = () => {
 
-    useEffect(() => {
+const clickear = () => {
+    console.log ("click");
+}
+useEffect(() => {
 
-        const clickear = () => {
-            console.log("click");
-        }
-
-    window.addEventListener("click", () => {
+window.addEventListener("click", () => {
         console.log("click")
     })
     return () => {
