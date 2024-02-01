@@ -1,7 +1,7 @@
 const products = [
   {
     "id": 1,
-    "category": "Aros",
+    "category": "aros",
     "title": "Aurora",
     "precio": 1500,
     "img": "../../src/assets/colgantes1.jpeg",
@@ -10,7 +10,7 @@ const products = [
   },
   {
     "id": 2,
-    "category": "Aros",
+    "category": "aros",
     "title": "Tifany",
     "precio": 1500,
     "img": "../../src/assets/colgantes2.png",
@@ -20,7 +20,7 @@ const products = [
 
   {
     "id": 3,
-    "category": "Aros",
+    "category": "aros",
     "title": "Valentina",
     "precio": 1500,
     "img": "../../src/assets/colgantes3..png",
@@ -30,7 +30,7 @@ const products = [
 
   {
     "id": 4,
-    "category": "Aros",
+    "category": "aros",
     "title": "Cubic",
     "precio": 1500,
     "img": "../../src/assets/colgantes4.png",

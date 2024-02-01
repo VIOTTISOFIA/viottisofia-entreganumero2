@@ -1,15 +1,6 @@
-import React, {useState} from "react"
+import React from "react"
 
-const itemCounter = ( {item}) => {
-    const[quantity, setQuantity] = useState (1);
-
-    const handleRestar = () => {
-        quantity > 1 && setQuantity (quantity - 1)
-    }
-
-    const handleSumar = () => {
-    quantity < item.stock && setQuantity (quantity + 1)
-    }
+const itemCounter = ( {quantity, handleRestar, handleSumar, HandleAgregar}) => {
 
 return (
     <div>
@@ -19,8 +10,8 @@ return (
 <p>{quantity}</p>
 <button onClick={handleSumar}>+</button>
 </div>
-<button className="agregar-al-carrito">Agregar al carrito</button>
-    </div>
+<button className="agregar-al-carrito" onClick={HandleAgregar}>Agregar al carrito</button>
+</div>
 )
 }
 

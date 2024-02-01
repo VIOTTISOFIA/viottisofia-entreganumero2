@@ -1,0 +1,17 @@
+
+.producto {
+    border: 1px black;
+    width: 250px;
+    height: 400px;
+    text-align: center;
+    background-color: #8bc4cb38;
+    color: black;
+    margin: 15px;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba (0, 0, 0 0, 2);
+}
+
+
+

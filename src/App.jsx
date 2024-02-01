@@ -1,33 +1,35 @@
 import './App.css'
 //REACT-ROUTER-DOM 
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 
 //COMPONENTES 
 import Header from "./Components/Header/Header";
 import NavBar from './Components/NavBar/NavBar';
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
-
+import ItemDetail from './Components/ItemDetail/ItemDetail';
+import itemCounter from './Components/itemCounter/itemCounter';
+import ItemList from './Components/ItemList/ItemList';
 
 //PAGES 
 import HomePage from './Components/pages/HomePage/HomePage';
 import AboutPage from './Components/pages/AboutPage/AboutPage';
 import ContactPage from './Components/pages/ContactPage/ContactPage';
 import ErrorPage from './Components/pages/ErrorFile/ErrorPage';
-import ItemDetailContainer from './Components/Header/ItemDetailContainer/ItemDetailContainer';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import Carrito from './Components/Carrito/Carrito';
+import Checkout from './Components/Checkout/Checkout';
 
 
 
 function App  ()  {
-  const [carrito, setCarrito] = useState ([]);
-  
-  const user = "sofia";
-  const edad = 27;
 
+  
 
   return (
 
       <div className='App'>
-        <CartContext.Provider value= {{user, edad }}>
+        <CartProvider>
       <BrowserRouter>
       <Header/>
       <NavBar/>
@@ -39,10 +41,12 @@ function App  ()  {
         <Route path='/contactPage' element= { <ContactPage/> } />
         <Route path='/errorPage' element= { <ErrorPage/> } />
         <Route path='/homePage' element= { <HomePage/> } />
+        <Route path='/carrito' element= { <Carrito/> } />
+        <Route path='/checkout' element= { <Checkout/> } />
 
       </Routes>
       </BrowserRouter>
-      </CartContext.Provider>
+      </CartProvider>
   
 
     </div>

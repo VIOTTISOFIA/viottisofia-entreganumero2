@@ -2,20 +2,19 @@ import React, { useEffect } from 'react'
 
 const AboutPage = () => {
 
-const clickear = () => {
-    console.log ("click");
-}
 useEffect(() => {
 
-window.addEventListener("click", () => {
-        console.log("click")
-    })
-    return () => {
-        window.removeEventListener("click", () => {
-            console.log("click")
-        })
+    const clickear = () => {
+    console.log("click");
     }
+
+window.addEventListener("click", clickear)
+
+return () => {
+        window.removeEventListener("click", clickear)
+        }
     }, [])
+
 return (
     <div className='container'>
         <h1 className='main-title'>About Nati</h1>
