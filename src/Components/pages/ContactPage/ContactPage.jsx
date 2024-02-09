@@ -1,12 +1,28 @@
-import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const ContactPage = () => {
-    const navigate = useNavigate();
+
+    const { register, handleSubmit } = useForm();
+
+    const enviar = (data) => {
+        console.log(data);
+    }
+
 return (
-    <div style={{textAlign:"center"}}>
-    <h1>Contact Page</h1>
-    <button onClick={() => navigate("/")}>Volver a Home</button>
-    </div> 
+
+    <div className="container">
+        <h1 className="main-title">Contacto</h1>
+        <form className="formulario" onSubmit={handleSubmit(enviar)}>
+
+            <input type="text" placeholder="Ingresá tu nombre" {...register("nombre")} />
+            <input type="email" placeholder="Ingresá tu e-mail" {...register("email")} />
+            <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")} />
+
+            <button className="enviar" type="submit">Enviar</button>
+
+        </form>
+    </div>
+
 )
 }
 

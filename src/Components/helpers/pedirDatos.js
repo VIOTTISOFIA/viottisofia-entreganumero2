@@ -1,23 +1,28 @@
-import products from "../../data/data";
+import products from "../../data/data.json";
 
 const pedirDatos = () => {
     return new Promise ((resolve, reject) => {
         setTimeout ( () => {
-            resolve(products); 
+            resolve(data); 
         }, 500)
     })
 }
 
 export const pedirItemPorId = (id) => {
-    const item = products.find((el) => el.id === id);
+    return new Promise ( (resolve, reject) => {
+const item = data.find((el) => el.id === id );
+if (item) {
+    resolve (item);
 
-    if (item) {
-        resolve (item)
-    } else {
-        reject ({
-            error: "No se encontro el producto "
-        })
-    }
-    }
-    export default pedirDatos
+} else {
+    reject ( {
+    error: "No se encontro el producto"
+})
+}
+} )
+
+}
+
+
+
 

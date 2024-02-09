@@ -24,8 +24,6 @@ import Checkout from './Components/Checkout/Checkout';
 
 function App  ()  {
 
-  
-
   return (
 
       <div className='App'>
@@ -33,9 +31,11 @@ function App  ()  {
       <BrowserRouter>
       <Header/>
       <NavBar/>
+
       <Routes>
         <Route path='/' element= { <ItemListContainer/> } />
         <Route path='/item/:id' element= {<ItemDetailContainer/>} />
+        <Route path='/productos' element= {<ItemListContainer/>} />
         <Route path='/productos/:category' element= {<ItemListContainer/>} />
         <Route path='/aboutPage' element= {<AboutPage/>} />
         <Route path='/contactPage' element= { <ContactPage/> } />

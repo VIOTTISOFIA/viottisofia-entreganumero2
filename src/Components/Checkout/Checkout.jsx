@@ -1,14 +1,14 @@
 import React, { useContext, useState } from 'react';
-import { CartContext } from '../../context/CartContext';
+import { CartContext } from '../context/CartContext';
 import { useForm } from "react-hook-form";
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from "../firebase/Config"
 
 const Checkout = () => {
 
-    const [pedidoId, setPedidoId] = useState("")
+    const [pedidoId, setPedidoId] = useState("");
     const {carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
-    const { register, handleSumit } = useForm();
+    const { register, handleSubmit } = useForm();
 
     const comprar = (data) => {
     const pedido = {
@@ -21,23 +21,23 @@ const Checkout = () => {
     addDoc(pedidosRef, pedido)
     .then((doc) => {
         setPedidoId(doc.id);
-        vaciarCarrito
+        vaciarCarrito()
     })
 
-
-    }
+}
     If (pedidoId) 
+    {
         return (
             <div className='container'>
                 <h1 className='main-title'>Muchas gracias por su compra</h1>
                 <p>Tu numero de pedido es:{pedidoId}</p>
             </div>
-        )
-    }
+        )}
+
 return (
     <div className='container'>
         <h1 className='main-title'>Finalizar compra</h1>
-        <form className='formulario' onSubmit={handleSumit(comprar)}>
+        <form className='formulario' onSubmit={handleSubmit(comprar)}>
 
         <input type="text" placeholder='Ingresa tu nombre' {...register("nombre")}/>
         <input type="email" placeholder='Ingresa tu e-mail' {...register("email")}/>

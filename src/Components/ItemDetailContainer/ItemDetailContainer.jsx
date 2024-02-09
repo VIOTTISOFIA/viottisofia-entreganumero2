@@ -3,10 +3,11 @@ import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/Config"
 
 const ItemDetailContainer = ( ) => {
     const [item, setItem] = useState(null)
-    const id = useParams ().id;
+    const id = useParams().id;
     console.log(id)
     
     useEffect (() => {
@@ -22,7 +23,7 @@ const ItemDetailContainer = ( ) => {
 
 return (
     <div>
-    <ItemDetail item={item} />
+{ item &&  <ItemDetail item={item} />} 
     </div>
 )
 }

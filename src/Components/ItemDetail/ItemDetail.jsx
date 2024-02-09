@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import  itemCounter  from "../itemCounter/itemCounter";
 import { CartContext } from "../../context/CartContext";
 
@@ -31,7 +31,7 @@ console.log(carrito)
                     quantity={quantity}
                     handleSumar={handleSumar}
                     handleRestar={handleRestar}
-                    handleAgregar= {() => {agregarAlCarrito (item, quantity)}}/>
+                    handleAgregar={() => {agregarAlCarrito (item, quantity) }}/>
                 </div>
             </div>
         </div>

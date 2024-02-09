@@ -9,7 +9,7 @@ return (
     <div>
     <Link className= "menu-link" to="/carrito">
         Carrito
-        <span className='numerito'> {cantidadEnCarrito}</span>
+        <span className='numerito'> { cantidadEnCarrito () } </span>
         </Link>
     </div>
 )
